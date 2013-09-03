@@ -1,6 +1,14 @@
+.DS_Store
 *.class
+
+*.classpath
+*.project
+*.ipr
+*.iws
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+target
