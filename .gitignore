@@ -1,10 +1,17 @@
 .DS_Store
 *.class
-
 *.classpath
 *.project
+
 *.ipr
 *.iws
+
+*.iml
+*.ipr
+*.iws
+*.h2.db
+*~
+.idea
 
 # Package Files #
 *.jar
@@ -12,3 +19,11 @@
 *.ear
 
 target
+stacktrace.log
+cobertura.ser
+build
+out
+Gemfile.lock
+.gradle
+atmoshpere-decorators.xml
+nohup.out
