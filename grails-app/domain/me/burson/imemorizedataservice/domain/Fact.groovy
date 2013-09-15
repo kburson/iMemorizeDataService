@@ -4,7 +4,7 @@ package me.burson.imemorizedataservice.domain
 class Fact {
 
     String id
-    
+
     String question
     Set<String> possibleAnswers
     String correctAnswer
