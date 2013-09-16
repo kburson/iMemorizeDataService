@@ -43,3 +43,60 @@ environments {
         }
     }
 }
+dataSource {
+    pooled = true
+    driverClassName = "org.h2.Driver"
+    username = "sa"
+    password = ""
+}
+
+
+//def mongoPort = 27017
+//def mongoHost = System.getProperty("ORCA_MONGODB_HOST") ? System.getProperty("ORCA_MONGODB_HOST") : (System.getenv("ORCA_MONGODB_HOST") ? System.getenv("ORCA_MONGODB_HOST") : "localhost")
+//def mongoDBName = "imemorize-data-service"
+//
+//// environment specific settings
+//environments {
+//    development {
+//        dataSource {
+//            dbCreate = "create-drop"
+//            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+//        }
+//    }
+//    test {
+//        grails {
+//            mongo {
+//                port = mongoPort
+//                host = mongoHost
+//                databaseName = mongoDBName
+//            }
+//        }
+//        dataSource {
+//            dbCreate = "create-drop"
+//        }
+//    }
+////    ci {
+////        grails {
+////            mongo {
+////                host = "bld-testmdb-01"
+////                databaseName = "navigation_service_test_ci"
+////            }
+////        }
+////        dataSource {
+////            dbCreate = "create-drop"
+////        }
+////    }
+//
+//    production {
+//        grails {
+//            mongo {
+//                port = mongoPort
+//                host = mongoHost
+//                databaseName = mongoDBName
+//            }
+//        }
+//        dataSource {
+//            dbCreate = "update"
+//        }
+//    }
+//}

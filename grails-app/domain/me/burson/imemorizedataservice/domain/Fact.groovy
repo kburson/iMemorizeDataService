@@ -1,13 +1,15 @@
 package me.burson.imemorizedataservice.domain
+import grails.rest.*
 
-@Resource(uri='/fact')
+@Resource(uri='/fact', formats=['json', 'xml'])
 class Fact {
 
     String id
 
     String question
-    Set<String> possibleAnswers
-    String correctAnswer
+    String answer
+
+    Set<String> wrongAnswers
 
     Set<String> references
 
@@ -15,7 +17,17 @@ class Fact {
 
     // deck, distribution, owner, public, private
 
+    //static mapWith = "mongo"
+
     static constraints = {
         question blank: false, empty: false, nullable:false
+    }
+
+    static mapping = {
+        id generator: 'uuid'
+    }
+
+    int compareTo(Fact fact) {
+        this.question.compareTo(fact.question) ?: this.answer.compareTo(fact.answer)
     }
 }
